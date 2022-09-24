@@ -1,0 +1,14 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'myapp style.css' %}">
+
+</head>
+
+<body>
+{% for i in products %}
+<a href="{% url 'myapp:detail' i.id %}">{{i.name}}</a>
+{% endfor %}
+
+</body>
+</html>
